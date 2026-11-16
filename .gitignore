@@ -1,0 +1,9 @@
+sim/*.vvp
+sim/*.vcd
+sim/*.expect
+sim/tmp_result.txt
+synth/*.json
+report/*.aux
+report/*.log
+report/*.out
+__pycache__/
