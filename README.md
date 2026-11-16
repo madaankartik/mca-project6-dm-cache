@@ -15,7 +15,9 @@ The repository also includes hit-rate / AMAT / speed-up analysis against a no-ca
 | | |
 |---|---|
 | 📄 IEEE report | [`report/main.pdf`](report/main.pdf) |
-| 🎥 Prototype video | **[ADD VIDEO LINK HERE]** |
+| 🎥 Prototype video | [Google Drive](https://drive.google.com/drive/folders/164beQm7dblldQdxgC0ZrdmC7gg5H2mHK?usp=sharing) |
+| ▶️ Run the simulation online | [EDA Playground](https://www.edaplayground.com/x/V24k) |
+| 📊 Presentation | [`docs/Project6_Presentation.pptx`](docs/Project6_Presentation.pptx) |
 | 👥 Team | Short Circuit |
 
 ## Team members
