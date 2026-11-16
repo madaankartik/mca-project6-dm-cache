@@ -1,0 +1,21 @@
+
+9. Printing statistics.
+
+=== cache_top ===
+
+   Number of wires:               2194
+   Number of wire bits:           6974
+   Number of public wires:        2194
+   Number of public wire bits:    6974
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               2479
+     CCU2C                          64
+     DP16KD                          1
+     L6MUX21                        96
+     LUT4                         1169
+     PFUMX                         381
+     TRELLIS_DPR16X4               512
+     TRELLIS_FF                    256
+

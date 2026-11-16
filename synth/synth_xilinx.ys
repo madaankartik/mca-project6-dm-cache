@@ -1,0 +1,4 @@
+# Yosys synthesis -- Xilinx 7-series (e.g. Artix-7 on Basys-3 / Nexys A7)
+read_verilog rtl/addr_decoder.v rtl/tag_ram.v rtl/valid_ram.v rtl/data_ram.v rtl/tag_comparator.v rtl/cache_fsm.v rtl/cache_top.v
+synth_xilinx -top cache_top -flatten
+tee -o synth/utilization_xilinx.txt stat

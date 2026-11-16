@@ -1,0 +1,38 @@
+digraph cache {
+  rankdir=LR; nodesep=0.3; ranksep=0.6; newrank=true;
+  node [shape=box, style="rounded,filled", fillcolor="#e3eefb", color="#2a78d6", fontname="Helvetica", fontsize=11];
+  edge [color="#5f5e5a", fontname="Helvetica", fontsize=9, arrowsize=0.7];
+
+  CPU [label="CPU /\nTestbench", fillcolor="#fbe3d8", color="#eb6834", height=2.2];
+  MEM [label="Main Memory\n256 KB\nlatency L = 10", fillcolor="#fbe3d8", color="#eb6834", height=2.2];
+
+  subgraph cluster_cache {
+    label="cache_top: 1 KB direct-mapped, 64 lines x 16 B"; fontname="Helvetica-Bold"; fontsize=12;
+    style="rounded,dashed"; color="#5f5e5a"; margin=14;
+    LATCH [label="Request\nlatch"];
+    DEC   [label="Address decoder\ntag [31:10]\nindex [9:4]\noffset [3:0]"];
+    TAG   [label="Tag RAM\n64 x 22 b"];
+    VAL   [label="Valid bits\n64 x 1 b"];
+    DATA  [label="Data RAM\n64 x 128 b\n+ word mux"];
+    CMP   [label="Tag\ncomparator"];
+    FSM   [label="Controller FSM\nIDLE | COMPARE\nALLOCATE | WRITE_MEM", fillcolor="#d6f2e6", color="#1baf7a"];
+    CNT   [label="Perf counters\nacc / hit / miss"];
+    {rank=same; TAG; VAL; DATA;}
+    {rank=same; CMP; CNT;}
+  }
+
+  CPU -> LATCH [label="req, we,\naddr, wdata"];
+  LATCH -> DEC;
+  DEC -> TAG [label="index"]; DEC -> VAL [label="index"]; DEC -> DATA [label="index,\nword_sel"];
+  DEC -> CMP [label="tag"];
+  TAG -> CMP; VAL -> CMP;
+  CMP -> FSM [label="hit"];
+  FSM -> CNT [style=dashed, label="first_lookup", constraint=false];
+  FSM -> MEM [label="mem_req, mem_we,\nmem_addr, mem_wdata"];
+  MEM -> FSM [label="mem_ready", constraint=false];
+  MEM -> DATA [label="refill block\n(128 b)", constraint=false];
+  DATA -> CPU [label="cpu_rdata", constraint=false];
+  FSM -> CPU [label="cpu_ready, cpu_hit", constraint=false];
+  FSM -> TAG [style=dashed, label="tag_we", constraint=false];
+  FSM -> DATA [style=dashed, label="block_we /\nword_we", constraint=false];
+}

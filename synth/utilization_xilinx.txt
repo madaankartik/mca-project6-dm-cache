@@ -1,0 +1,28 @@
+
+9. Printing statistics.
+
+=== cache_top ===
+
+   Number of wires:                696
+   Number of wire bits:           2645
+   Number of public wires:          86
+   Number of public wire bits:    1211
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               1332
+     BUFG                            1
+     CARRY4                         32
+     FDRE                          233
+     IBUF                          197
+     INV                             9
+     LUT2                           25
+     LUT3                          141
+     LUT4                            8
+     LUT5                            5
+     LUT6                          133
+     MUXF7                         145
+     MUXF8                          69
+     OBUF                          198
+     RAM64M                        136
+
