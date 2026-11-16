@@ -1,0 +1,17 @@
+digraph fsm {
+  rankdir=LR; nodesep=0.6; ranksep=1.0;
+  node [shape=circle, style=filled, fillcolor="#e3eefb", color="#2a78d6", fontname="Helvetica-Bold", fontsize=11, width=1.25, fixedsize=true];
+  edge [color="#5f5e5a", fontname="Helvetica", fontsize=9, arrowsize=0.7];
+  start [shape=point, width=0.12, color="#1f1f1e"];
+  IDLE; COMPARE; ALLOCATE [fillcolor="#fbe3d8", color="#eb6834"]; WRITE_MEM [label="WRITE\nMEM", fillcolor="#fbe3d8", color="#eb6834"];
+  start -> IDLE [label="rst"];
+  IDLE -> IDLE [label="!cpu_req"];
+  IDLE -> COMPARE [label="cpu_req /\nlatch request"];
+  COMPARE -> IDLE [label="load & hit /\ncpu_ready"];
+  COMPARE -> ALLOCATE [label="load & miss"];
+  COMPARE -> WRITE_MEM [label="store /\n(hit: update word)"];
+  ALLOCATE -> ALLOCATE [label="!mem_ready /\nmem_req"];
+  ALLOCATE -> COMPARE [label="mem_ready /\nwrite block, tag, V=1"];
+  WRITE_MEM -> WRITE_MEM [label="!mem_ready /\nmem_req, mem_we"];
+  WRITE_MEM -> IDLE [label="mem_ready /\ncpu_ready"];
+}
