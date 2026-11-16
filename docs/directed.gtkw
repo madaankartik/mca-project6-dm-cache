@@ -1,0 +1,34 @@
+[*] GTKWave save file -- open with:  gtkwave sim/directed.vcd docs/directed.gtkw
+[timestart] 30000
+[size] 1600 900
+[signals_width] 260
+[sst_expanded] 1
+@28
+tb_directed.dut.g_cache.u_cache.clk
+tb_directed.dut.g_cache.u_cache.rst
+tb_directed.dut.g_cache.u_cache.cpu_req
+tb_directed.dut.g_cache.u_cache.cpu_we
+@22
+tb_directed.dut.g_cache.u_cache.req_addr[31:0]
+@24
+tb_directed.dut.g_cache.u_cache.fsm_state[1:0]
+@22
+tb_directed.dut.g_cache.u_cache.tag[21:0]
+tb_directed.dut.g_cache.u_cache.index[5:0]
+tb_directed.dut.g_cache.u_cache.tag_stored[21:0]
+@28
+tb_directed.dut.g_cache.u_cache.valid_bit
+tb_directed.dut.g_cache.u_cache.hit
+tb_directed.dut.g_cache.u_cache.mem_req
+tb_directed.dut.g_cache.u_cache.mem_we
+tb_directed.dut.g_cache.u_cache.mem_ready
+tb_directed.dut.g_cache.u_cache.data_block_we
+tb_directed.dut.g_cache.u_cache.data_word_we
+tb_directed.dut.g_cache.u_cache.cpu_ready
+tb_directed.dut.g_cache.u_cache.cpu_hit
+@22
+tb_directed.dut.g_cache.u_cache.cpu_rdata[31:0]
+@24
+tb_directed.dut.g_cache.u_cache.stat_accesses[31:0]
+tb_directed.dut.g_cache.u_cache.stat_hits[31:0]
+tb_directed.dut.g_cache.u_cache.stat_misses[31:0]

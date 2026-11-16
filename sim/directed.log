@@ -1,0 +1,52 @@
+VCD info: dumpfile sim/directed.vcd opened for output.
+
+=== T1: cold (compulsory) miss ===
+  RD  0x00000040 -> data=0xc0de0010  MISS  (14 cycles)
+  [PASS] T1 cold miss returns memory data
+  [PASS] T1 read-miss latency = LAT+4 cycles
+
+=== T2: temporal locality ===
+  RD  0x00000040 -> data=0xc0de0010  HIT   (2 cycles)
+  [PASS] T2 same address hits
+  [PASS] T2 read-hit latency = 2 cycles
+
+=== T3: spatial locality (same 16-byte block) ===
+  RD  0x00000044 -> data=0xc0de0011  HIT   (2 cycles)
+  [PASS] T3a word 1 of block hits
+  RD  0x0000004c -> data=0xc0de0013  HIT   (2 cycles)
+  [PASS] T3b word 3 of block hits
+
+=== T4: conflict miss (same index, different tag) ===
+  RD  0x00000440 -> data=0xc0de0110  MISS  (14 cycles)
+  [PASS] T4a 0x440 maps to index 4 -> conflict miss
+  RD  0x00000040 -> data=0xc0de0010  MISS  (14 cycles)
+  [PASS] T4b 0x040 was evicted -> miss again
+
+=== T5: write hit (write-through) ===
+  WR  0x00000048 <- data=0xdeadbeef  HIT   (13 cycles)
+  [PASS] T5a write hit updates main memory
+  RD  0x00000048 -> data=0xdeadbeef  HIT   (2 cycles)
+  [PASS] T5b read-after-write hits with new data
+
+=== T6: write miss (no-write-allocate) ===
+  WR  0x00002000 <- data=0xcafef00d  MISS  (13 cycles)
+  [PASS] T6a write miss goes to memory only
+  RD  0x00002000 -> data=0xcafef00d  MISS  (14 cycles)
+  [PASS] T6b block not allocated -> read misses, data correct
+  RD  0x00002004 -> data=0xc0de0801  HIT   (2 cycles)
+  [PASS] T6c neighbour word now hits
+
+=== T7: fill all 64 lines, then re-read ===
+  [PASS] T7 all 64 lines resident (64/64 hits)
+
+=== T8: reset invalidates every line ===
+  [PASS] T8a counters cleared by reset
+  RD  0x00010004 -> data=0xc0de4001  MISS  (14 cycles)
+  [PASS] T8b previously cached line now misses
+
+==================================================
+  DIRECTED TESTS: 16 passed, 0 failed
+  RESULT: ALL TESTS PASSED
+==================================================
+
+tb/tb_directed.v:132: $finish called at 11390000 (1ps)
