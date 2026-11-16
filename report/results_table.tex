@@ -1,0 +1,20 @@
+\begin{table}[!t]
+\centering
+\caption{RTL results: 1\,KB direct-mapped cache, 16\,B blocks, $L=10$ cycles}
+\label{tab:results}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lrrrrrr}
+\hline
+Trace & Acc. & Hit & AMAT & Cycles & Cycles & Speed- \\
+ & & rate & (load) & cache & no cache & up \\
+\hline
+sequential & 2048 & 75.0\% & 5.00 & 10240 & 24576 & 2.40$\times$ \\
+loop & 1280 & 97.5\% & 2.30 & 2944 & 15360 & 5.22$\times$ \\
+random & 2000 & 1.1\% & 13.87 & 27736 & 24000 & 0.87$\times$ \\
+conflict & 1000 & 0.0\% & 14.00 & 14000 & 12000 & 0.86$\times$ \\
+vecadd (aligned) & 1536 & 0.0\% & 14.00 & 20992 & 18432 & 0.88$\times$ \\
+vecadd (padded) & 1536 & 50.0\% & 5.00 & 11776 & 18432 & 1.57$\times$ \\
+mixed & 3000 & 57.8\% & 7.03 & 25042 & 36000 & 1.44$\times$ \\
+\hline
+\end{tabular}
+\end{table}
