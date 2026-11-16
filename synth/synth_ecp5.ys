@@ -1,0 +1,4 @@
+# Yosys synthesis -- Lattice ECP5 (open-source flow, used for timing / Fmax via nextpnr)
+read_verilog rtl/addr_decoder.v rtl/tag_ram.v rtl/valid_ram.v rtl/data_ram.v rtl/tag_comparator.v rtl/cache_fsm.v rtl/cache_top.v
+synth_ecp5 -top cache_top -json synth/cache_top_ecp5.json
+tee -o synth/utilization_ecp5.txt stat

@@ -1,0 +1,245 @@
+Warning: Use of default value for --package is deprecated. Please add '--package CABGA381' to arguments.
+
+Info: Logic utilisation before packing:
+Info:     Total LUT4s:      4369/83640     5%
+Info:         logic LUTs:   1169/83640     1%
+Info:         carry LUTs:    128/83640     0%
+Info:           RAM LUTs:   2048/10455    19%
+Info:          RAMW LUTs:   1024/20910     4%
+
+Info:      Total DFFs:       256/83640     0%
+
+Info: Packing IOs..
+Info: Packing constants..
+Info: Packing carries...
+Info: Packing LUTs...
+Info: Packing LUT5-7s...
+Info: Packing FFs...
+Info:     107 FFs paired with LUTs.
+Info: Generating derived timing constraints...
+Info: Promoting globals...
+Info: Checksum: 0x2d1c612b
+
+Info: Annotating ports with timing budgets for target frequency 100.00 MHz
+Info: Checksum: 0xdf0606d4
+
+Info: Device utilisation:
+Info: 	          TRELLIS_IO:     0/  365     0%
+Info: 	                DCCA:     0/   56     0%
+Info: 	              DP16KD:     1/  208     0%
+Info: 	          MULT18X18D:     0/  156     0%
+Info: 	              ALU54B:     0/   78     0%
+Info: 	             EHXPLLL:     0/    4     0%
+Info: 	             EXTREFB:     0/    2     0%
+Info: 	                DCUA:     0/    2     0%
+Info: 	           PCSCLKDIV:     0/    2     0%
+Info: 	             IOLOGIC:     0/  224     0%
+Info: 	            SIOLOGIC:     0/  141     0%
+Info: 	                 GSR:     0/    1     0%
+Info: 	               JTAGG:     0/    1     0%
+Info: 	                OSCG:     0/    1     0%
+Info: 	               SEDGA:     0/    1     0%
+Info: 	                 DTR:     0/    1     0%
+Info: 	             USRMCLK:     0/    1     0%
+Info: 	             CLKDIVF:     0/    4     0%
+Info: 	           ECLKSYNCB:     0/   10     0%
+Info: 	             DLLDELD:     0/    8     0%
+Info: 	              DDRDLL:     0/    4     0%
+Info: 	             DQSBUFM:     0/   14     0%
+Info: 	     TRELLIS_ECLKBUF:     0/    8     0%
+Info: 	        ECLKBRIDGECS:     0/    2     0%
+Info: 	                DCSC:     0/    2     0%
+Info: 	          TRELLIS_FF:   256/83640     0%
+Info: 	        TRELLIS_COMB:  4387/83640     5%
+Info: 	        TRELLIS_RAMW:   512/10455     4%
+
+Info: Placed 0 cells based on constraints.
+Info: Creating initial analytic placement for 1360 cells, random placement wirelen = 122881.
+Info:     at initial placer iter 0, wirelen = 69
+Info:     at initial placer iter 1, wirelen = 65
+Info:     at initial placer iter 2, wirelen = 60
+Info:     at initial placer iter 3, wirelen = 63
+Info: Running main analytical placer, max placement attempts per cell = 3323042.
+Info:     at iteration #1, type ALL: wirelen solved = 59, spread = 22848, legal = 24183; time = 0.13s
+Info:     at iteration #2, type ALL: wirelen solved = 1240, spread = 11244, legal = 12490; time = 0.11s
+Info:     at iteration #3, type ALL: wirelen solved = 2275, spread = 8129, legal = 9165; time = 0.12s
+Info:     at iteration #4, type ALL: wirelen solved = 3177, spread = 7626, legal = 9274; time = 0.11s
+Info:     at iteration #5, type ALL: wirelen solved = 3525, spread = 6859, legal = 8559; time = 0.12s
+Info:     at iteration #6, type ALL: wirelen solved = 3419, spread = 6859, legal = 8408; time = 0.14s
+Info:     at iteration #7, type ALL: wirelen solved = 3695, spread = 6837, legal = 8528; time = 0.11s
+Info:     at iteration #8, type ALL: wirelen solved = 3944, spread = 6232, legal = 7697; time = 0.13s
+Info:     at iteration #9, type ALL: wirelen solved = 3864, spread = 6004, legal = 7860; time = 0.11s
+Info:     at iteration #10, type ALL: wirelen solved = 3789, spread = 5793, legal = 7417; time = 0.11s
+Info:     at iteration #11, type ALL: wirelen solved = 3838, spread = 5934, legal = 7417; time = 0.09s
+Info:     at iteration #12, type ALL: wirelen solved = 4039, spread = 5954, legal = 7305; time = 0.10s
+Info:     at iteration #13, type ALL: wirelen solved = 4041, spread = 6249, legal = 8338; time = 0.10s
+Info:     at iteration #14, type ALL: wirelen solved = 4360, spread = 6654, legal = 8597; time = 0.10s
+Info:     at iteration #15, type ALL: wirelen solved = 4655, spread = 7123, legal = 8977; time = 0.10s
+Info:     at iteration #16, type ALL: wirelen solved = 4998, spread = 7629, legal = 8778; time = 0.09s
+Info:     at iteration #17, type ALL: wirelen solved = 5455, spread = 8062, legal = 9532; time = 0.10s
+Info: HeAP Placer Time: 3.10s
+Info:   of which solving equations: 1.88s
+Info:   of which spreading cells: 0.18s
+Info:   of which strict legalisation: 0.06s
+
+Info: Running simulated annealing placer for refinement.
+Info:   at iteration #1: temp = 0.000000, timing cost = 3943, wirelen = 7305
+Info:   at iteration #5: temp = 0.000000, timing cost = 2665, wirelen = 6453
+Info:   at iteration #10: temp = 0.000000, timing cost = 2977, wirelen = 6256
+Info:   at iteration #15: temp = 0.000000, timing cost = 3444, wirelen = 6045
+Info:   at iteration #20: temp = 0.000000, timing cost = 3369, wirelen = 5983
+Info:   at iteration #21: temp = 0.000000, timing cost = 3227, wirelen = 5966 
+Info: SA placement time 9.26s
+
+Info: Max frequency for clock 'clk': 40.60 MHz (FAIL at 100.00 MHz)
+
+Info: Slack histogram:
+Info:  legend: * represents 38 endpoint(s)
+Info:          + represents [1,38) endpoint(s)
+Info: [-14628, -13434) |******+
+Info: [-13434, -12240) |**************************+
+Info: [-12240, -11046) |************************+
+Info: [-11046,  -9852) |********+
+Info: [ -9852,  -8658) |*+
+Info: [ -8658,  -7464) | 
+Info: [ -7464,  -6270) | 
+Info: [ -6270,  -5076) | 
+Info: [ -5076,  -3882) | 
+Info: [ -3882,  -2688) |+
+Info: [ -2688,  -1494) |+
+Info: [ -1494,   -300) |+
+Info: [  -300,    894) |+
+Info: [   894,   2088) |*+
+Info: [  2088,   3282) |*****************************+
+Info: [  3282,   4476) |************************************************************ 
+Info: [  4476,   5670) |**********************************************************+
+Info: [  5670,   6864) |******************************************************+
+Info: [  6864,   8058) |***************+
+Info: [  8058,   9252) |*+
+Info: Checksum: 0xc14dcdd5
+Info: Routing globals...
+
+Info: Routing..
+Info: Setting up routing queue.
+Info: Routing 22759 arcs.
+Info:            |   (re-)routed arcs  |   delta    | remaining|       time spent     |
+Info:    IterCnt |  w/ripup   wo/ripup |  w/r  wo/r |      arcs| batch(sec) total(sec)|
+Info:       1000 |      170        829 |  170   829 |     22161|       0.35       0.35|
+Info:       2000 |      246       1753 |   76   924 |     21270|       0.12       0.46|
+Info:       3000 |      329       2670 |   83   917 |     20428|       0.12       0.58|
+Info:       4000 |      404       3595 |   75   925 |     19531|       0.14       0.72|
+Info:       5000 |      587       4412 |  183   817 |     18943|       0.14       0.86|
+Info:       6000 |      670       5261 |   83   849 |     18043|       0.10       0.96|
+Info:       7000 |      769       6076 |   99   815 |     17200|       0.07       1.03|
+Info:       8000 |      973       6813 |  204   737 |     16489|       0.12       1.14|
+Info:       9000 |     1065       7706 |   92   893 |     15589|       0.08       1.22|
+Info:      10000 |     1065       8706 |    0  1000 |     14589|       0.02       1.25|
+Info:      11000 |     1074       9697 |    9   991 |     13598|       0.02       1.27|
+Info:      12000 |     1086      10685 |   12   988 |     12610|       0.02       1.29|
+Info:      13000 |     1093      11630 |    7   945 |     11618|       0.03       1.32|
+Info:      14000 |     1138      12570 |   45   940 |     10705|       0.14       1.46|
+Info:      15000 |     1170      13528 |   32   958 |      9861|       0.21       1.66|
+Info:      16000 |     1198      14485 |   28   957 |      8925|       0.17       1.83|
+Info:      17000 |     1263      15406 |   65   921 |      8259|       0.20       2.03|
+Info:      18000 |     1296      16353 |   33   947 |      7317|       0.16       2.18|
+Info:      19000 |     1347      17294 |   51   941 |      6474|       0.16       2.35|
+Info:      20000 |     1394      18230 |   47   936 |      5530|       0.16       2.50|
+Info:      21000 |     1453      19159 |   59   929 |      4816|       0.16       2.67|
+Info:      22000 |     1538      20068 |   85   909 |      4027|       0.18       2.85|
+Info:      23000 |     1600      21000 |   62   932 |      3112|       0.17       3.02|
+Info:      24000 |     1680      21908 |   80   908 |      2275|       0.21       3.23|
+Info:      25000 |     1770      22801 |   90   893 |      1419|       0.20       3.43|
+Info:      26000 |     1867      23686 |   97   885 |       570|       0.22       3.65|
+Info:      26670 |     1931      24286 |   64   600 |         0|       0.16       3.81|
+Info: Routing complete.
+Info: Router1 time 3.81s
+Info: Checksum: 0xf61917ca
+
+Info: Critical path report for clock 'clk' (posedge -> posedge):
+Info: curr total
+Info:  5.8  5.8  Source u_tag.mem.0.0.DOB3
+Info:  1.9  7.8    Net u_tag.mem.0.0_DOB0[1] budget 0.088000 ns (55,22) -> (53,3)
+Info:                Sink u_tag.mem.0.0_DOA13_LUT4_A_Z_L6MUX21_Z_4_D0_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z.C
+Info:                Defined in:
+Info:                  /usr/bin/../share/yosys/ecp5/cells_map.v:108.23-108.24
+Info:  0.2  8.0  Source u_tag.mem.0.0_DOA13_LUT4_A_Z_L6MUX21_Z_4_D0_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z.F
+Info:  0.0  8.0    Net u_tag.mem.0.0_DOA13_LUT4_A_Z_L6MUX21_Z_4_D0_L6MUX21_Z_D1_PFUMX_Z_ALUT budget 0.087000 ns (53,3) -> (53,3)
+Info:                Sink u_tag.mem.0.0_DOA13_LUT4_A_Z_L6MUX21_Z_4_D0_L6MUX21_Z_D1_PFUMX_Z_BLUT_LUT4_Z.F1
+Info:                Defined in:
+Info:                  /usr/bin/../share/yosys/ecp5/cells_map.v:157.30-157.32
+Info:  0.2  8.2  Source u_tag.mem.0.0_DOA13_LUT4_A_Z_L6MUX21_Z_4_D0_L6MUX21_Z_D1_PFUMX_Z_BLUT_LUT4_Z.OFX
+Info:  0.0  8.2    Net u_tag.mem.0.0_DOA13_LUT4_A_Z_L6MUX21_Z_4_D0_L6MUX21_Z_D1 budget 0.000000 ns (53,3) -> (53,3)
+Info:                Sink u_tag.mem.0.0_DOA13_LUT4_A_Z_L6MUX21_Z_4_D0_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z.FXB
+Info:                Defined in:
+Info:                  /usr/bin/../share/yosys/ecp5/cells_map.v:157.54-157.56
+Info:  0.2  8.4  Source u_tag.mem.0.0_DOA13_LUT4_A_Z_L6MUX21_Z_4_D0_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z.OFX
+Info:  0.0  8.4    Net u_tag.mem.0.0_DOA13_LUT4_A_Z_L6MUX21_Z_4_D0 budget 0.000000 ns (53,3) -> (53,3)
+Info:                Sink u_tag.mem.0.0_DOA13_LUT4_A_Z_L6MUX21_Z_4_D1_L6MUX21_Z_D0_PFUMX_Z_ALUT_LUT4_Z.FXA
+Info:                Defined in:
+Info:                  /usr/bin/../share/yosys/ecp5/cells_map.v:157.66-157.68
+Info:  0.2  8.6  Source u_tag.mem.0.0_DOA13_LUT4_A_Z_L6MUX21_Z_4_D1_L6MUX21_Z_D0_PFUMX_Z_ALUT_LUT4_Z.OFX
+Info:  0.9  9.6    Net u_tag.mem.0.0_DOA13_LUT4_A_Z[1] budget 0.175000 ns (53,3) -> (54,4)
+Info:                Sink u_tag.mem.0.0_DOA14_LUT4_A_Z_LUT4_A_Z_PFUMX_ALUT_Z_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z.B
+Info:                Defined in:
+Info:                  /usr/bin/../share/yosys/ecp5/cells_map.v:108.23-108.24
+Info:  0.2  9.8  Source u_tag.mem.0.0_DOA14_LUT4_A_Z_LUT4_A_Z_PFUMX_ALUT_Z_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z.F
+Info:  0.0  9.8    Net u_tag.mem.0.0_DOA14_LUT4_A_Z_LUT4_A_Z_PFUMX_ALUT_Z_L6MUX21_Z_D1_PFUMX_Z_ALUT budget 0.174000 ns (54,4) -> (54,4)
+Info:                Sink u_tag.mem.0.0_DOA14_LUT4_A_Z_LUT4_A_Z_PFUMX_ALUT_Z_L6MUX21_Z_D1_PFUMX_Z_BLUT_LUT4_Z.F1
+Info:                Defined in:
+Info:                  /usr/bin/../share/yosys/ecp5/cells_map.v:141.30-141.32
+Info:  0.2 10.0  Source u_tag.mem.0.0_DOA14_LUT4_A_Z_LUT4_A_Z_PFUMX_ALUT_Z_L6MUX21_Z_D1_PFUMX_Z_BLUT_LUT4_Z.OFX
+Info:  0.0 10.0    Net u_tag.mem.0.0_DOA14_LUT4_A_Z_LUT4_A_Z_PFUMX_ALUT_Z_L6MUX21_Z_D1 budget 0.000000 ns (54,4) -> (54,4)
+Info:                Sink u_tag.mem.0.0_DOA14_LUT4_A_Z_LUT4_A_Z_PFUMX_ALUT_Z_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z.FXB
+Info:                Defined in:
+Info:                  /usr/bin/../share/yosys/ecp5/cells_map.v:141.38-141.40
+Info:  0.2 10.2  Source u_tag.mem.0.0_DOA14_LUT4_A_Z_LUT4_A_Z_PFUMX_ALUT_Z_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z.OFX
+Info:  1.8 12.0    Net u_tag.mem.0.0_DOA14_LUT4_A_Z_LUT4_A_Z_PFUMX_ALUT_Z[6] budget 0.262000 ns (54,4) -> (44,11)
+Info:                Sink req_we_LUT4_D_Z_L6MUX21_Z_D1_L6MUX21_Z_D0_PFUMX_Z_ALUT_LUT4_Z.M
+Info:                Defined in:
+Info:                  /usr/bin/../share/yosys/ecp5/cells_map.v:108.23-108.24
+Info:  0.3 12.3  Source req_we_LUT4_D_Z_L6MUX21_Z_D1_L6MUX21_Z_D0_PFUMX_Z_ALUT_LUT4_Z.OFX
+Info:  1.6 13.9    Net cpu_rdata_PFUMX_Z_ALUT_LUT4_Z_C[2] budget 0.262000 ns (44,11) -> (31,8)
+Info:                Sink u_tag.mem.0.0_DOA14_LUT4_A_Z_LUT4_A_Z_PFUMX_ALUT_Z_L6MUX21_Z_5_D1_PFUMX_Z_C0_PFUMX_C0_2_ALUT_LUT4_Z.C
+Info:                Defined in:
+Info:                  /usr/bin/../share/yosys/ecp5/cells_map.v:108.23-108.24
+Info:  0.2 14.1  Source u_tag.mem.0.0_DOA14_LUT4_A_Z_LUT4_A_Z_PFUMX_ALUT_Z_L6MUX21_Z_5_D1_PFUMX_Z_C0_PFUMX_C0_2_ALUT_LUT4_Z.F
+Info:  0.0 14.1    Net u_tag.mem.0.0_DOA14_LUT4_A_Z_LUT4_A_Z_PFUMX_ALUT_Z_L6MUX21_Z_5_D1_PFUMX_Z_C0_PFUMX_C0_2_ALUT budget 0.262000 ns (31,8) -> (31,8)
+Info:                Sink u_tag.mem.0.0_DOA14_LUT4_A_Z_LUT4_A_Z_PFUMX_ALUT_Z_L6MUX21_Z_5_D1_PFUMX_Z_C0_PFUMX_C0_2_BLUT_LUT4_Z.F1
+Info:                Defined in:
+Info:                  /usr/bin/../share/yosys/ecp5/cells_map.v:133.22-133.24
+Info:  0.2 14.3  Source u_tag.mem.0.0_DOA14_LUT4_A_Z_LUT4_A_Z_PFUMX_ALUT_Z_L6MUX21_Z_5_D1_PFUMX_Z_C0_PFUMX_C0_2_BLUT_LUT4_Z.OFX
+Info:  1.6 15.9    Net u_tag.mem.0.0_DOA14_LUT4_A_Z_LUT4_A_Z_PFUMX_ALUT_Z_L6MUX21_Z_3_D0_PFUMX_Z_C0_PFUMX_C0_Z[288] budget 0.262000 ns (31,8) -> (21,5)
+Info:                Sink u_data.mem.0.296$DPRAM_COMB0.WRE
+Info:                Defined in:
+Info:                  /usr/bin/../share/yosys/techmap.v:614.34-614.35
+Info:  0.4 16.3  Setup u_data.mem.0.296$DPRAM_COMB0.WRE
+Info: 8.4 ns logic, 7.9 ns routing
+
+Warning: Max frequency for clock 'clk': 61.43 MHz (FAIL at 100.00 MHz)
+
+Info: Slack histogram:
+Info:  legend: * represents 64 endpoint(s)
+Info:          + represents [1,64) endpoint(s)
+Info: [ -6278,  -5514) |*******+
+Info: [ -5514,  -4750) |****************************+
+Info: [ -4750,  -3986) |*****+
+Info: [ -3986,  -3222) |+
+Info: [ -3222,  -2458) | 
+Info: [ -2458,  -1694) | 
+Info: [ -1694,   -930) |+
+Info: [  -930,   -166) |+
+Info: [  -166,    598) |+
+Info: [   598,   1362) | 
+Info: [  1362,   2126) |+
+Info: [  2126,   2890) |+
+Info: [  2890,   3654) |+
+Info: [  3654,   4418) | 
+Info: [  4418,   5182) |+
+Info: [  5182,   5946) |**+
+Info: [  5946,   6710) |******************************+
+Info: [  6710,   7474) |************************************************************ 
+Info: [  7474,   8238) |************************************+
+Info: [  8238,   9002) |**+
+2 warnings, 0 errors
+
+Info: Program finished normally.
